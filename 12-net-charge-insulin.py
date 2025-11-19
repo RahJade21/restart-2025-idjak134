@@ -20,3 +20,28 @@ netCharge = (
     for x in ['y','c','d','e']}.values())))
 print(pH)
 print(netCharge)
+
+print("=====")
+# Refactoring using for
+for pH in range(15):
+    netCharge = (
+        +(sum({x: ((seqCount[x]*(10**pKR[x]))/((10**pH)+(10**pKR[x]))) \
+        for x in ['k','h','r']}.values()))
+        -(sum({x: ((seqCount[x]*(10**pH))/((10**pH)+(10**pKR[x]))) \
+        for x in ['y','c','d','e']}.values())))
+        
+    print(f'pH: {pH} | NettCharge: {netCharge}')
+        
+print("=====")
+# Refactoring using while
+pH=0
+while(pH<=14):
+    netCharge = (
+        +(sum({x: ((seqCount[x]*(10**pKR[x]))/((10**pH)+(10**pKR[x]))) \
+        for x in ['k','h','r']}.values()))
+        -(sum({x: ((seqCount[x]*(10**pH))/((10**pH)+(10**pKR[x]))) \
+        for x in ['y','c','d','e']}.values())))
+        
+    print(f'pH: {pH} | NettCharge: {netCharge}')
+    pH += 1
+            
